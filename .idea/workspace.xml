@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5caa0590-3d16-498d-839e-a7ceab64942b" name="Changes" comment="">
+    <list default="true" id="5caa0590-3d16-498d-839e-a7ceab64942b" name="Changes" comment="Initial commit/ createUI">
       <change afterPath="$PROJECT_DIR$/Client/src/main/java/com/iskhak/DropBoxCloudStorage/Client/Network.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Server/src/main/java/com/iskhak/DropBoxCloudStorage/Server/ChatHandler.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Server/src/main/java/com/iskhak/DropBoxCloudStorage/Server/EchoServer.java" afterDir="false" />
@@ -136,5 +136,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
