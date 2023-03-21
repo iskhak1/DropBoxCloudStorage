@@ -23,7 +23,15 @@ public class ChatHandler implements Runnable {
         }
         os.flush();
     }
-
+    private void setListOfFile(String str) throws IOException {
+        os.writeUTF("#list#");
+        List<String> files = getFiles(str);
+        os.writeInt(files.size());
+        for (String file : files) {
+            os.writeUTF(file);
+        }
+        os.flush();
+    }
     private List<String> getFiles(String dir){
         String [] list = new File(dir).list();
         return Arrays.asList(list);
