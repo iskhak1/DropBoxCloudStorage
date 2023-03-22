@@ -1,14 +1,13 @@
 package com.iskhak.DropBoxCloudStorage.Server;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.net.Socket;
+import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.List;
 
 public class ChatHandler implements Runnable {
+
     private String serverDir = "Server/base";
     private DataInputStream is;
     private DataOutputStream os;
@@ -17,13 +16,10 @@ public class ChatHandler implements Runnable {
         is = new DataInputStream(socket.getInputStream());
         os = new DataOutputStream(socket.getOutputStream());
         System.out.println("client accepted");
-        List<String> files = getFiles(serverDir);
-        for (String file : files) {
-            os.writeUTF(file);
-        }
-        os.flush();
+        sendListOfFile(serverDir);
     }
-    private void setListOfFile(String str) throws IOException {
+
+    private void sendListOfFile(String str) throws IOException {
         os.writeUTF("#list#");
         List<String> files = getFiles(str);
         os.writeInt(files.size());
@@ -32,23 +28,37 @@ public class ChatHandler implements Runnable {
         }
         os.flush();
     }
-    private List<String> getFiles(String dir){
-        String [] list = new File(dir).list();
+
+    private List<String> getFiles(String dir) {
+        String[] list = new File(dir).list();
         return Arrays.asList(list);
     }
 
-
     @Override
     public void run() {
-        try{
-            while(true){
-                String msg = is.readUTF();
+        byte[] buf = new byte[256];
+        try {
+            while (true) {
+                String command = is.readUTF();
                 System.out.println("received");
-                os.writeUTF(msg);
-                os.flush();
+                if (command.equals("#file#")) {
+                    String fileName = is.readUTF();
+                    long len = is.readLong();
+                    File file = Path.of(serverDir).resolve(fileName).toFile();
+                    try(FileOutputStream fos = new FileOutputStream(file)) {
+                        for (int i = 0; i < (len + 255) / 256; i++) {
+                            int read = is.read(buf);
+                                fos.write(buf,0,read);
+                        }
+                    }catch (Exception e){
+                     e.printStackTrace();
+                    }
+                    sendListOfFile(serverDir);
+                }
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e.getMessage());
         }
     }
+
 }

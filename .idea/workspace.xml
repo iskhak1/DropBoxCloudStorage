@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5caa0590-3d16-498d-839e-a7ceab64942b" name="Changes" comment="Initial commit/ createUI">
-      <change afterPath="$PROJECT_DIR$/Client/src/main/java/com/iskhak/DropBoxCloudStorage/Client/Network.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/com/iskhak/DropBoxCloudStorage/Server/ChatHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/com/iskhak/DropBoxCloudStorage/Server/EchoServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/resources/com/iskhak/DropBoxCloudStorage/Server/Readme.txt" afterDir="false" />
+    <list default="true" id="5caa0590-3d16-498d-839e-a7ceab64942b" name="Changes" comment="create setListOfFiles methods">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/main/java/com/iskhak/DropBoxCloudStorage/Client/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/com/iskhak/DropBoxCloudStorage/Client/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/main/java/com/iskhak/DropBoxCloudStorage/Client/Network.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/com/iskhak/DropBoxCloudStorage/Client/Network.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/main/resources/com/iskhak/DropBoxCloudStorage/Client/fxml/ClientView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/resources/com/iskhak/DropBoxCloudStorage/Client/fxml/ClientView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/base/1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/com/iskhak/DropBoxCloudStorage/Server/ChatHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/main/java/com/iskhak/DropBoxCloudStorage/Server/ChatHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +43,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2N15jA1VOfVOqpqnNGeeHWIEqD0" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -56,7 +57,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;liberica-11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/isaka/IdeaProjects/DropBoxCloudStorage/Server/base&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/oem/IdeaProjects/DropBoxCloudStorage/Server/base&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -67,6 +68,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Server/base" />
       <recent name="C:\Users\isaka\IdeaProjects\DropBoxCloudStorage\Server\base" />
       <recent name="C:\Users\isaka\IdeaProjects\DropBoxCloudStorage\Server" />
     </key>
@@ -131,6 +133,7 @@
       <workItem from="1679380983263" duration="116000" />
       <workItem from="1679382952343" duration="3484000" />
       <workItem from="1679403541735" duration="5899000" />
+      <workItem from="1679476157640" duration="5473000" />
     </task>
     <servers />
   </component>
