@@ -1,4 +1,8 @@
 package com.iskhak.DropBoxCloudStorage.Client;
+import com.iskhak.DropBoxCloudStorage.Broker.CloudMessage;
+import com.iskhak.DropBoxCloudStorage.Broker.FileMessage;
+import com.iskhak.DropBoxCloudStorage.Broker.FileRequest;
+import com.iskhak.DropBoxCloudStorage.Broker.ListFiles;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -6,10 +10,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
 
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.List;
@@ -55,15 +59,21 @@ public class Controller implements Initializable {
     private void readLoop(){
         try{
             while(true){
-                String command = network.readString();
-                if(command.equals("#list#")){
-                    Platform.runLater(()->listViewServer.getItems().clear());
-                    int len = network.readInt();
-                    for (int i = 0; i < len; i++) {
-                        String file = network.readString();
-                        Platform.runLater(()-> listViewServer.getItems().add(file));
-                    }
+                CloudMessage message = (CloudMessage) network.read();
+                if(message instanceof ListFiles listFiles){
+                    Platform.runLater(()-> {
+                        listViewServer.getItems().clear();
+                        listViewServer.getItems().addAll(listFiles.getFiles());
+                    });
+                }else if(message instanceof FileMessage fileMessage){
+                    Path current = Path.of(homeDir).resolve(fileMessage.getName());
+                    Files.write(current,fileMessage.getData());
+                    Platform.runLater(()-> {
+                        listViewClient.getItems().clear();
+                        listViewClient.getItems().addAll(getFiles(homeDir));
+                    });
                 }
+
             }
         }catch (Exception e){
             System.out.println(e.getMessage());
@@ -71,20 +81,12 @@ public class Controller implements Initializable {
     }
 
     public void upload(ActionEvent event) throws IOException {
-        network.getOs().writeUTF("#file#");
         String file = (String)listViewClient.getSelectionModel().getSelectedItem();
-        network.getOs().writeUTF(file);
-        File toSend = Path.of(homeDir).resolve(file).toFile();
-        network.getOs().writeLong(toSend.length());
-        try(FileInputStream fis = new FileInputStream(toSend)){
-            while(fis.available()>0){
-               int read = fis.read(buf);
-               network.getOs().write(buf,0,read);
-            }
-        }
-        network.getOs().flush();
+        network.write(new FileMessage(Path.of(homeDir).resolve(file)));
     }
 
-    public void download(ActionEvent event) {
+    public void download(ActionEvent event) throws IOException {
+        String file = (String)listViewServer.getSelectionModel().getSelectedItem();
+        network.write(new FileRequest(file));
     }
 }
