@@ -4,28 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5caa0590-3d16-498d-839e-a7ceab64942b" name="Changes" comment="nio server">
-      <change afterPath="$PROJECT_DIR$/Broker/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="5caa0590-3d16-498d-839e-a7ceab64942b" name="Changes" comment="resolve bag( module not found: package dependencies)">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/main/java/com/iskhak/DropBoxCloudStorage/Client/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/com/iskhak/DropBoxCloudStorage/Client/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/main/java/com/iskhak/DropBoxCloudStorage/Client/Network.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/com/iskhak/DropBoxCloudStorage/Client/Network.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/main/java/com/iskhak/DropBoxCloudStorage/Client/NController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/com/iskhak/DropBoxCloudStorage/Client/NController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/main/resources/com/iskhak/DropBoxCloudStorage/Client/fxml/UI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/resources/com/iskhak/DropBoxCloudStorage/Client/fxml/UI.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="module-info" />
+        <option value="FxmlFile" />
+        <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -55,26 +55,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "openjdk-20",
-    "last_opened_file_path": "/home/oem/IdeaProjects/DropBoxCloudStorage/Server/base",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.5045977",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-20&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/oem/IdeaProjects/DropBoxCloudStorage/Server/base&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.5045977&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Server/base" />
@@ -151,12 +151,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.iskhak.DropBoxCloudStorage.Server.nio.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.iskhak.DropBoxCloudStorage.Server.nio.Main" />
+    <configuration name="com.iskhak.DropBoxCloudStorage.Server.netty.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.iskhak.DropBoxCloudStorage.Server.netty.Main" />
       <module name="Server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.iskhak.DropBoxCloudStorage.Server.nio.*" />
+          <option name="PATTERN" value="com.iskhak.DropBoxCloudStorage.Server.netty.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -164,20 +164,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.CloudServer" />
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.NettyEchoServer" />
-      <item itemvalue="Application.NettyCorePipelineServer" />
-      <item itemvalue="Application.com.iskhak.DropBoxCloudStorage.Server.nio.Main" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.CloudServer" />
-        <item itemvalue="Application.NettyEchoServer" />
-        <item itemvalue="Application.NettyCorePipelineServer" />
-        <item itemvalue="Application.com.iskhak.DropBoxCloudStorage.Server.nio.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -210,6 +200,9 @@
       <workItem from="1680460232516" duration="1242000" />
       <workItem from="1680582387755" duration="5832000" />
       <workItem from="1680664250728" duration="8727000" />
+      <workItem from="1680931058008" duration="616000" />
+      <workItem from="1680941171558" duration="249000" />
+      <workItem from="1681020531141" duration="4484000" />
     </task>
     <task id="LOCAL-00001" summary="upload work">
       <created>1679503120893</created>
@@ -232,7 +225,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680584052962</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update UI">
+      <created>1681022114034</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681022114034</updated>
+    </task>
+    <task id="LOCAL-00005" summary="resolve bag( module not found: package dependencies)">
+      <created>1681022183045</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681022183045</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,17 +259,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="upload work" />
     <MESSAGE value="nio server" />
-    <option name="LAST_COMMIT_MESSAGE" value="nio server" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Client/src/main/java/com/iskhak/DropBoxCloudStorage/Client/Controller.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="update UI" />
+    <MESSAGE value="resolve bag( module not found: package dependencies)" />
+    <option name="LAST_COMMIT_MESSAGE" value="resolve bag( module not found: package dependencies)" />
   </component>
 </project>

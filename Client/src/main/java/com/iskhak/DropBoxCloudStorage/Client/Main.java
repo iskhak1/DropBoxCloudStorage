@@ -14,7 +14,7 @@ public class Main extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/UI.fxml"));
         Scene scene = new Scene(fxmlLoader.load(),720,512);
         stage.setScene(scene);
-        stage.setResizable(false);
+        stage.setResizable(true);
         stage.show();
     }
 }

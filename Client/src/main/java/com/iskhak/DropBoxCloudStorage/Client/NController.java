@@ -4,14 +4,19 @@ import com.iskhak.DropBoxCloudStorage.Broker.CloudMessage;
 import com.iskhak.DropBoxCloudStorage.Broker.FileMessage;
 import com.iskhak.DropBoxCloudStorage.Broker.FileRequest;
 import com.iskhak.DropBoxCloudStorage.Broker.ListFiles;
+import javafx.animation.Animation;
+import javafx.animation.FadeTransition;
+import javafx.animation.FillTransition;
+import javafx.animation.ParallelTransition;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.util.Duration;
 
 import java.io.File;
 import java.io.IOException;
@@ -51,16 +56,6 @@ public class NController {
     private HBox upload;
 
     @FXML
-    void download(MouseEvent event) {
-
-    }
-
-    @FXML
-    void upload(MouseEvent event) {
-
-    }
-
-    @FXML
     void initialize() {
         try {
             buf = new byte[256];
@@ -75,7 +70,7 @@ public class NController {
     }
 
     private void initListClientView(){
-        homeDir = System.getProperty("user.home");
+        homeDir = "ClientFiles";
         listViewClient.getItems().clear();
         listViewClient.getItems().addAll(getFiles(homeDir));
     }
@@ -108,14 +103,28 @@ public class NController {
         }
     }
 
-    public void upload(ActionEvent event) throws IOException {
-        String file = (String)listViewClient.getSelectionModel().getSelectedItem();
+    @FXML
+    public void upload(MouseEvent event) throws IOException {
+        btnAnimation(upload);
+        String file = (String) listViewClient.getSelectionModel().getSelectedItem();
         network.write(new FileMessage(Path.of(homeDir).resolve(file)));
     }
 
-    public void download(ActionEvent event) throws IOException {
-        String file = (String)listViewServer.getSelectionModel().getSelectedItem();
+    @FXML
+    public void download(MouseEvent event) throws IOException {
+        btnAnimation(download);
+        String file = (String) listViewServer.getSelectionModel().getSelectedItem();
         network.write(new FileRequest(file));
+    }
+
+    private void btnAnimation(Node node) {
+        FadeTransition fadeTransition =
+                new FadeTransition(Duration.millis(300), node);
+        fadeTransition.setFromValue(1.0f);
+        fadeTransition.setToValue(0.3f);
+        fadeTransition.setCycleCount(2);
+        fadeTransition.setAutoReverse(true);
+        fadeTransition.play();
     }
 
 }

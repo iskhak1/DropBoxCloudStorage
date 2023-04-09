@@ -129,7 +129,7 @@
                         </HBox>
                      </children>
                   </HBox>
-                  <ListView fx:id="listViewClient" prefHeight="329.0" prefWidth="343.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: white; -fx-border-color: white; -fx-focus-traversable: false;" VBox.vgrow="ALWAYS">
+                  <ListView fx:id="listViewClient" prefHeight="329.0" prefWidth="343.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: white; -fx-border-color: white; -fx-focus-traversable: false;" styleClass="thumb" stylesheets="@../css/scrollPane.CSS" VBox.vgrow="ALWAYS">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -190,7 +190,7 @@
                   <Insets />
                </VBox.margin>
                <children>
-                  <HBox fx:id="upload" alignment="CENTER" onMouseDragged="#upload" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: rgb(258,138,0); -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 11;">
+                  <HBox fx:id="upload" alignment="CENTER" onMouseClicked="#upload" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: rgb(258,138,0); -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 11;">
                      <children>
                         <Label text="Upload" textFill="#ff8a00">
                            <font>
@@ -228,7 +228,7 @@
                   <Insets />
                </VBox.margin>
                <children>
-                  <HBox fx:id="download" alignment="CENTER" onMouseDragged="#download" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: rgb(255,138,0); -fx-border-radius: 10; -fx-border-width: 2; -fx-background-radius: 11;">
+                  <HBox fx:id="download" alignment="CENTER" onMouseClicked="#download" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: rgb(255,138,0); -fx-border-radius: 10; -fx-border-width: 2; -fx-background-radius: 11;">
                      <children>
                         <Label text="Downoload" textFill="#ff8a00">
                            <font>
