@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<GridPane hgap="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="720.0" style="-fx-background-color: rgb(136,191,242);" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.iskhak.DropBoxCloudStorage.Client.NController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="790.0" minHeight="10.0" prefHeight="395.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="121.0" minHeight="10.0" percentHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: rgba(55,146,221,80);" GridPane.columnSpan="2">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" offsetY="4.0">
+               <color>
+                  <Color red="0.7098039388656616" green="0.7098039388656616" blue="0.7098039388656616" opacity="0.5" />
+               </color>
+            </DropShadow>
+         </effect>
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="720.0">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="299.0" text="Wellcome to Iskhak Cloud" textAlignment="CENTER" textFill="#fff966">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="0.0" offsetY="2.0" radius="0.0" width="0.0">
+                           <color>
+                              <Color red="1.0" green="0.5411764979362488" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="-10.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="720.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="360.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="59.0" text="Client" textAlignment="CENTER" textFill="#ff8a00">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <effect>
+                              <DropShadow blurType="GAUSSIAN" height="0.0" offsetY="1.0" radius="0.0" width="0.0">
+                                 <color>
+                                    <Color red="1.0" green="0.9764705896377563" blue="0.4000000059604645" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="-5.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="360.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="63.0" text="Server" textAlignment="CENTER" textFill="#ff8a00">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <effect>
+                              <DropShadow blurType="GAUSSIAN" height="0.0" offsetY="1.0" radius="0.0" width="0.0">
+                                 <color>
+                                    <Color red="1.0" green="0.9764705896377563" blue="0.4000000059604645" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="-5.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.rowIndex="1">
+         <children>
+            <Label fx:id="pathToCurDirClient" text="CurrentDir" />
+            <VBox prefHeight="405.0" prefWidth="360.0" style="-fx-background-color: white; -fx-background-radius: 10;" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="22.0" prefWidth="343.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="22.0" prefWidth="343.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label text="Name" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="22.0" prefWidth="330.0">
+                           <children>
+                              <Label text="Status" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="22.0" prefWidth="343.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="500.0" text="DataModified" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="22.0" prefWidth="330.0">
+                           <children>
+                              <Label text="Type" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="22.0" prefWidth="343.0">
+                           <children>
+                              <Label text="Size" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <ListView fx:id="listViewClient" prefHeight="329.0" prefWidth="343.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: white; -fx-border-color: white; -fx-focus-traversable: false;" VBox.vgrow="ALWAYS">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </ListView>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="8.0" top="25.0" />
+         </padding>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <Label fx:id="pathToCurDirServer" text="CurrentDir" />
+            <VBox prefHeight="405.0" prefWidth="360.0" style="-fx-background-color: white; -fx-background-radius: 10;" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="22.0" prefWidth="343.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="22.0" prefWidth="343.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label text="Name" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="22.0" prefWidth="330.0">
+                           <children>
+                              <Label />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="22.0" prefWidth="343.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="500.0" text="DataModified" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="22.0" prefWidth="330.0">
+                           <children>
+                              <Label text="Type" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="22.0" prefWidth="343.0">
+                           <children>
+                              <Label text="Size" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <ListView fx:id="listViewServer" prefHeight="329.0" prefWidth="343.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: white; -fx-background-color: white; -fx-focus-traversable: false;" />
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets right="8.0" top="25.0" />
+         </padding>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <HBox fx:id="upload" alignment="CENTER" onMouseDragged="#upload" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: rgb(258,138,0); -fx-border-width: 2; -fx-border-radius: 10; -fx-background-radius: 11;">
+                     <children>
+                        <Label text="Upload" textFill="#ff8a00">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Label>
+                     </children></HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: rgb(197,197,197); -fx-background-radius: 10;">
+                     <children>
+                        <Label text="Action">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Label>
+                     </children></HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: rgb(197,197,197); -fx-background-radius: 10;">
+                     <children>
+                        <Label text="Action">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Label>
+                     </children></HBox>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="8.0" top="5.0" />
+         </padding>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <HBox fx:id="download" alignment="CENTER" onMouseDragged="#download" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: rgb(255,138,0); -fx-border-radius: 10; -fx-border-width: 2; -fx-background-radius: 11;">
+                     <children>
+                        <Label text="Downoload" textFill="#ff8a00">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: rgb(197,197,197); -fx-background-radius: 10;">
+                     <children>
+                        <Label text="Action">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: rgb(197,197,197); -fx-background-radius: 10;">
+                     <children>
+                        <Label text="Action">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" right="8.0" top="5.0" />
+         </padding>
+      </VBox>
+   </children>
+</GridPane>

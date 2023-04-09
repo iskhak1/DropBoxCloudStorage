@@ -1,0 +1,3 @@
+.radio-button:selected .radio .dot {
+    -fx-background-color: rgb(143,178,68);
+}

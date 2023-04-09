@@ -1,0 +1,25 @@
+/*.checkbox> .box {*/
+/*                      -fx-background-color: rgb(188 , 188 ,188);*/
+/*              }*/
+/*          .label {*/
+/*                  -fx-text-fill: rgb(188 , 188 ,188) ;*/
+/*              }*/
+/*.checkbox:selected >.box   {*/
+/*                      -fx-background-color: rgb(33 , 150 ,243);*/
+/*              }*/
+
+/*.checkbox:selected >.box > .mark {*/
+/*                      -fx-background-color: White;*/
+/*              }*/
+
+.checkbox> .box {
+                      -fx-background-color: rgb(188 , 188 ,188);
+              }
+
+.checkbox:selected >.box   {
+                      -fx-background-color: rgb(33 , 150 ,243);
+              }
+
+.checkbox:selected >.box > .mark {
+                      -fx-background-color: White;
+              }

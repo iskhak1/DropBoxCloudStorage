@@ -1,0 +1,11 @@
+
+.scroll-bar:vertical > .thumb{
+   -fx-background-color: rgb(33 , 150 ,243);
+    -fx-background-size: 1;
+             }
+.scroll-pane .viewport {
+    -fx-background-color: white; /*or whatever you want*/
+}
+.scroll-pane {
+    -fx-background-color:transparent;
+}

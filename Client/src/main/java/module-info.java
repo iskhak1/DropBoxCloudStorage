@@ -4,11 +4,11 @@ module Client {
     requires javafx.fxml;
     requires javafx.graphics;
     requires javafx.controls;
-    requires netty.all;
     requires Broker;
+    requires netty.all;
 
 
-    exports com.iskhak.DropBoxCloudStorage.Client to javafx.fxml,javafx.graphics,javafx.base;
-    opens com.iskhak.DropBoxCloudStorage.Client to javafx.fxml;
+    exports com.iskhak.DropBoxCloudStorage.Client to javafx.fxml,javafx.graphics,javafx.base,javafx.controls;
+    opens com.iskhak.DropBoxCloudStorage.Client to javafx.fxml,javafx.graphics,javafx.base,javafx.controls,Broker;
 
 }
