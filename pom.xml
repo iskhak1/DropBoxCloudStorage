@@ -8,6 +8,7 @@
     <artifactId>DropBoxCloudStorage</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+
     <modules>
         <module>Client</module>
         <module>Server</module>
@@ -15,9 +16,10 @@
     </modules>
 
     <properties>
-        <maven.compiler.source>20</maven.compiler.source>
-        <maven.compiler.target>20</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
 
 </project>
